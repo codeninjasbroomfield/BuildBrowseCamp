@@ -1,0 +1,98 @@
+<!doctype.html>
+    <html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>02-23 Margins Activity 5</title>
+        <link rel="stylesheet" type="text/css" href="linking1.css">
+        <style>
+            *{
+                box-sizing: border-box;
+            }
+            
+            body{
+                margin:0;
+            }
+            
+            section{
+                margin: 10px;
+            }
+            
+            p{
+                font-size: 18px;
+            }
+            
+            .floatright{
+                float:right;
+                margin-left:20px;
+                margin-bottom: 20px;
+            }
+            
+            .boxes{
+                clear:both;
+            }
+            
+            .container{
+                width:50%;
+                height:220px;
+                float:left;
+                padding:20px;
+            }
+            
+            .one{
+                background-color: skyblue;
+            }
+            
+            .two{
+                background-color:pink;
+            }
+            
+            .two img {
+                float: left;
+                margin-right: 10px;
+                padding: 3px;
+                border:1px solid gray;
+                width: 180px;
+                height:100px;
+            }
+            
+            footer{
+                clear:both;
+                margin-top:20px;
+                margin-bottom:10px;
+                height: 70px;
+                background-color: blueviolet;
+                color:White;
+                padding:10px 20px;
+            }
+            
+            footer p{
+                float:left;
+            }
+        </style>
+    </head>
+
+    <body>
+        <section>
+            <h1>Margins and Padding</h1>
+            <img class="floatright" src="https://picsum.photos/200/200" alt="Sample Image">
+            <p>By giving height and width to blocks and adjusting their position and other properties, we can place them anywhere that we want to on the screen.</p>
+            <div class="boxes">
+                <div class="container one">
+                    <h2>Container One</h2>
+                    <p>Not only can these containers be placed anywhere, they can be styled to look the way we want them to.</p>
+                </div>
+                <div class="container two">
+                    <h2>Container Two</h2>
+                    <img src="https://picsum.photos/100/50" alt="Sample Image">
+                    <p>Text, images and anything else can be used this way.</p>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <p>And this is just the beginning!</p>
+        </footer>
+    </body>
+
+    </html>

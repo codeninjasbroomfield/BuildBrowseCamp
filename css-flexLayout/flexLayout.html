@@ -1,0 +1,122 @@
+<!doctype.html>
+<html lang="en">
+	<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02-23 Margins Activity 5</title>
+    <link rel="stylesheet" type="text/css" href="linking1.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        article {
+            margin: 20px 50px;
+            display: flex;
+            flex-flow: row wrap;
+            border: 1px solid black;
+            justify-content: center;
+        }
+
+        .row {
+            width: 100%;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+        }
+        
+        .halfrow{
+            width:60%;
+          justify-content: center;
+        }
+        
+        .col-2{
+            width:45%;
+            margin:5px 0 5px 0 ;
+            display: flex;
+            flex-flow: column nowrap;
+            padding: 5px 10px;
+        }
+        
+        .title {
+            background-color: darkslateblue;
+            color: white;
+        }
+        
+        .imageHolder{
+            max-width: 100%;
+            padding:5px;
+            border:1px solid lightgray;
+        }       
+
+        .one {
+            background-color: #ccc;
+            color: #222;
+        }
+
+        .two {
+            background-color: #ffd1f1;
+        }
+
+
+        footer {
+            height: 50px;
+            background-color: darkviolet;
+        }
+
+        footer p {
+            text-align: center;
+            padding: 3px;
+            color: white;
+            font-family: sans-serif;
+        }
+        
+        @media screen and (min-width:320px) and (max-width:420px){
+            
+            h1{
+                font-size:1em;
+            }
+            .row{
+                flex-flow:column nowrap;
+            }
+            
+            .col-2, .halfrow{
+                width:100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <article>
+        <div class="row title">
+            <h1>Margins and Padding</h1>
+        </div>
+        <div class="row halfrow">
+            <section class="col-2">
+                <img class="imageHolder" src="https://picsum.photos/200/200" alt="Sample Image">
+            </section>
+            <section class="col-2">
+                <p>By giving height and width to blocks and adjusting their position and other properties, we can place them anywhere that we want to on the screen.</p>
+            </section>
+        </div>
+        <div class="row">
+            <div class="col-2 one">
+                <h2>Container One</h2>
+                <p>Not only can these containers be placed anywhere, they can be styled to look the way we want them to.</p>
+            </div>
+            <div class="col-2 two">
+                <h2>Container Two</h2>
+                <img class="imageHolder" src="https://picsum.photos/200/50" alt="Sample Image" width="50%">
+                <p>Text, images and anything else can be used this way.</p>
+            </div>
+        </div>
+        <footer class="row">
+            <p>And this is just the beginning!</p>
+        </footer>
+    </article>
+</body></html>

@@ -1,0 +1,18 @@
+body{
+	color: #777777;
+	font-family: sans-serif;
+}
+p{
+	font-family: serif;
+}
+p em{
+	font-weight: bold;
+	color: black;
+}
+.ninjastyle{
+	color: #3366aa;
+}
+h1{
+	font-size: 48px;
+	font-style: italic;
+}
