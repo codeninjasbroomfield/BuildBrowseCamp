@@ -1,0 +1,86 @@
+<!Doctype html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+		<style>
+			.container{
+				width:80%;
+				display: flex;
+				flex-flow: row wrap;
+			}
+			.card{
+				width:30%;
+				height:200px;
+				border: 1px solid lightgray;
+				margin: 3px 5px;
+				background-repeat: no-repeat;
+				background-color: black;
+			}
+
+			.coverEntireCard{
+				background-size: cover;
+			}
+
+			.containWithinCard{
+				background-size: contain;
+			}
+			.avengers{
+				background-image: url('images/avengers.jpg');
+			}
+
+			.harrypotter{
+				background-image: url('images/harrypotter.jpg');
+			}
+
+			.captainAmerica{
+				background-image: url('images/captainAmerica.jpg');
+			}
+			h3{
+				margin:20px;
+			}
+			pre{
+				width:30%;
+				padding:5px;
+				border: 1px solid darkgreen;
+				background-color: lightgray;
+			}
+
+			@media screen and (max-width: 400px){
+				.card{
+					width:85%;
+					justify-content: center;
+				}
+
+				.container{
+					justify-content: center;
+				}
+				pre{
+					width:75%;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<pre>background-size: cover;</pre>
+		<h3>Images cover the entire div, leaving no space</h3>
+		<div class="container">
+			<div class="card avengers coverEntireCard">
+			</div>
+			<div class="card harrypotter coverEntireCard">
+			</div>
+			<div class="card captainAmerica coverEntireCard">
+			</div>
+		</div>
+
+		<pre>background-size: contain;</pre>
+		<h3>Images are contained to fit inside the div, hencing leaving some black space</h3>
+		<div class="container">
+			<div class="card avengers containWithinCard">
+			</div>
+			<div class="card harrypotter containWithinCard">
+			</div>
+			<div class="card captainAmerica containWithinCard">
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,59 @@
+<!Doctype html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+		<title>Navigation menu</title>
+		<style>
+			.HMenu{
+				margin:0;
+				padding: 0;
+				height: 50px;
+				width: 50%;
+				background-color: #ccc;
+				border:1px solid gray;
+				border-radius: 3px;
+				display: flex;
+				flex-flow: row nowrap;
+			}
+
+			.HMenu a{
+				margin:0;
+				padding:15px;
+				color:black;
+				text-decoration: none;
+				cursor: pointer;
+				border-right: 1px solid gray;
+			}
+
+			.HMenu a:hover{
+				background-color: darkgray;
+				color:white;
+			}
+
+			.HMenu a.active{
+				background-color: #4CAF50;
+				color:white;
+				padding: 15px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Navigation Links</h1>
+		<p>navigation links without style</p>
+
+			<a href="/html/">HTML</a> |
+			<a href="/css/">CSS</a> |
+			<a href="/js/">JavaScript</a> |
+			<a href="/jquery/">jQuery</a>
+
+
+		<p>Horizontal Nav links with styles</p>
+
+			<a href="/html/" class="active">HTML</a>
+			<a href="/css/">CSS</a>
+			<a href="/js/">JavaScript</a>
+			<a href="/jquery/">jQuery</a>
+
+
+	</body>
+</html>

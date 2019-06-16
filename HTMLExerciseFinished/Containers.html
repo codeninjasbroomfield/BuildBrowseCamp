@@ -1,0 +1,72 @@
+<!Doctype html>
+<html>
+	<head>
+		<meta name="viewport"content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+		<style>
+		@media screen and (max-width:500px) {
+			.container {
+			 width: 100%;
+			 display: flex;
+			 flex-flow: column wrap;
+			 align-items:center;
+			}
+			.card {
+				width: 80%;
+				height: 200px;
+				border: 1px solid lightgray;
+				margin: 3px 5px;
+			}
+		}
+		@media screen and (min-width:501px) {
+			.container {
+			 width: 100%;
+			 display: flex;
+			 flex-flow: row wrap;
+			 align-items:center;
+			}
+			.card {
+				width: 200px;
+				height: 200px;
+				border: 1px solid lightgray;
+				margin: 3px 5px;
+				cursor: pointer;
+			}
+		}
+		.orange { background-color: orange; }
+		.red { background-color: red; }
+		.blue { background-color: blue; }
+		.green { background-color: green; }
+		.gray { background-color: gray; }
+		.yellow { background-color: yellow; }
+		.flowers { background-image: url('images/flower.jpg'); }
+		.flower2 { background-image: url('images/flower2.png'); }
+		.forest { background-image: url('images/forest.jpg'); }
+		</style>
+	</head>
+	<body>
+		<h1>div tags and Flexbox</h1>
+		<p>lets display 3 images side by side </p>
+		<div class="container">
+			<div class="card flower2">
+			</div>
+			<div class="card red">
+			</div>
+			<div class="card forest">
+			</div>
+			<div class="card blue">
+			</div>
+			<div class="card orange">
+			</div>
+			<div class="card flowers">
+			</div>
+			<div class="card green ">
+			</div>
+			<div class="card red">
+			</div>
+			<div class="card yellow">
+			</div>
+			<div class="card gray">
+			</div>
+		</div>
+	</body>
+</html>

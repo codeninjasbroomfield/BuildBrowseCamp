@@ -1,0 +1,28 @@
+@media screen and (max-width:420px) {
+	header {
+		height: auto;
+	}
+
+	main {
+		flex-flow: column wrap;
+	}
+
+	.menu {
+		width: 92%;
+		display: none;
+	}
+
+	.menuIcon {
+		display: block;
+	}
+
+	.content {
+		width: 100%;
+		height: auto;
+	}
+
+	.menu li:hover {
+		cursor: pointer;
+	}
+
+}
