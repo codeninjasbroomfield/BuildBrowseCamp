@@ -1,0 +1,139 @@
+
+<!doctype html>
+<html lang="en">
+	<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ninja Pup's Fun Quiz!</title>
+    <link rel="stylesheet" type="text/css" href="quiz.css">
+</head>
+
+<body>
+    <!--		HTML for game-->
+    <section>
+        <div id="main">
+            <div id="picture"></div>
+            <div id="blocks">
+                <div class="row">
+                    <button id="1">1</button>
+                    <button id="2">2</button>
+                    <button id="3">3</button>
+                </div>
+                <div class="row">
+                    <button id="4">4</button>
+                    <button id="5">5</button>
+                    <button id="6">6</button>
+                </div>
+                <div class="row">
+                    <button id="7">7</button>
+                    <button id="8">8</button>
+                    <button id="9">9</button>
+                </div>
+            </div>
+            <div id="questionWindow">
+                <p id="q">question</p><br>
+                <div id="choices" class="answers">
+                    <p id="a1">answer 1</p>
+                    <p id="a2">answer 2</p>
+                    <p id="a3">answer 3</p>
+                    <p id="a4">answer 4</p>
+                </div>
+                <p id="continue">Click to continue</p>
+            </div>
+            <h1 id="win">Congratulations, You did it all!</h1>
+        </div>
+    </section>
+    <script type="text/javascript" src="loader.js"></script>
+
+    <!--		JavaScript for game goes here-->
+    <script type="text/javascript">
+        var myButtons = Array.from(document.getElementsByTagName("button"));
+        var qdialog = document.getElementById('questionWindow');
+
+
+        //adding click event listener for button
+        for (var count = 0; count < 9; count++) {
+            listenerForButton(count);
+        }
+
+        //adding Event Listener for answers
+        for (var i = 1; i <= 4; i++) {
+            document.getElementById('a' + i).addEventListener('click', function(e) {
+                checkAnswer(e);
+            })
+        }
+
+        function checkAnswer(e) {
+            var target = e.target;
+            console.log(target.id, target.dataset.correct);
+            //check if answer is correct
+            if (target.dataset['correct']) {
+                target.style.color = "green";
+                document.getElementById('continue').style.display = "block";
+            } else {
+                target.style.color = "red";
+            }
+            //hide it when continue is clicked
+            //  qdialog.style.display = "none";
+        }
+
+        document.getElementById('continue').addEventListener('click', function() {
+            qdialog.style.display = "none";
+        })
+
+        function listenerForButton(index) {
+            myButtons[index].addEventListener("click", function() {
+                showQDialog(index);
+            });
+        }
+
+
+        function showQDialog(qnumber) {
+            //console.log(qdialog);
+            qdialog.style.display = "block";
+            showQuestionNChoices(qnumber);
+        }
+
+        function showQuestionNChoices(qnumber) {
+            //console.log(qnumber);
+            myButtons[qnumber].style.visibility = "hidden";
+
+            //to shuffle answers
+            var randomChoices = getRandomList();
+
+            //show question and answer
+            document.getElementById('q').innerHTML = questions[qnumber][0];
+            for (var i = 0; i < randomChoices.length; i++) {
+                //get the id to use
+                var id = 'a' + randomChoices[i].toString();
+                
+                //IF ALREADY EXISTS REMOVE THE DATASET CORRECT
+                if (document.getElementById(id).dataset['correct']){
+                    delete document.getElementById(id).dataset['correct'];
+                }
+    
+                //we check if i=0, as the correct answer from the questions array is always at questions[0][1]
+                if (i == 0) {
+                    document.getElementById(id).dataset['correct'] = true;
+                }
+                //set the choices and style
+                document.getElementById(id).innerHTML = questions[qnumber][i + 1];
+                document.getElementById(id).style.color = "black";
+                document.getElementById('continue').style.display = "none";
+            }
+        }
+
+        //get the random numbers from 1to4
+        function getRandomList() {
+            var randomChoices = [];
+            do {
+                var n = Math.round(Math.random() * 4);
+                if (n == 0) continue;
+                if (randomChoices.indexOf(n) == -1) {
+                    randomChoices.push(n);
+                }
+            } while (randomChoices.length < 4);
+            return randomChoices;
+        }
+    </script>
+</body></html>
