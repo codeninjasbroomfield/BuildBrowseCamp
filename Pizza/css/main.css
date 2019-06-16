@@ -1,0 +1,173 @@
+body {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.banner {
+	background-color: #33B6FF;
+	width: 80%;
+	height: 80px;
+	margin-right: auto;
+	margin-left: auto;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	border: 1px solid gray;
+}
+
+.banner a {
+	width: 0;
+}
+
+.logo {
+	height: 50%;
+	padding: 1em;
+}
+
+.brandName {
+	padding: 0 1em;
+}
+
+.main {
+	width: 80%;
+	margin-right: auto;
+	margin-left: auto;
+	border: 1px solid gray;
+	height: auto;
+}
+
+.menu {
+	width: 100%;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	margin-bottom: 5em;
+	padding: 0;
+}
+
+.menuItem {
+	border-width: 10px 1px;
+	border: 1px solid lightgray;
+	width: 30%;
+	list-style: none;
+	margin: 5px;
+	display: inline;
+}
+
+.item {
+	padding: 0;
+	margin: 0;
+	justify-content: center;
+	display: flex;
+	flex-flow: column nowrap;
+}
+
+.item h2 {
+	text-align: center;
+	background-color: #FF4333;
+	padding: 1em;
+}
+
+.item button {
+	background-color: white; /* Green */
+	border: 1px solid #4CAF50;
+	color: #4CAF50;
+	padding: 10px 22px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	float: right;
+	-webkit-transition-duration: 0.4s; /* Safari */
+	transition-duration: 0.4s;
+}
+
+.item button:hover {
+	background-color: #4CAF50; /* Green */
+	color: white;
+}
+
+.item img {
+	max-width: 100%;
+	height: 150px;
+	padding: 1em;
+}
+
+.orderDetails {
+	height: 100px;
+	width: 100%;
+	margin: 0;
+	font-size: 1.5em;
+	text-align: center;
+	padding: 5px 0;
+	display: inline-block;
+	background-color: #EBFAD6;
+	background-image: url('../images/backdrop.jpg');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	opacity: 0.9;
+	display: none;
+	text-shadow: 2px 2px 8px #FF0000;
+}
+
+/* Footer style */
+footer {
+	background-color: #33B6FF;
+	border-bottom: 1px solid gray;
+	border-left: 1px solid gray;
+	border-right: 1px solid gray;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 1em;
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: flex-start;
+	justify-content: center;
+}
+
+footer > p {
+	padding: 0.3em;
+}
+
+@media screen and (max-width:800px) {
+	.menuItem {
+		width: 45%;
+	}
+
+}
+
+@media screen and (max-width:420px) {
+	.banner {
+		flex-flow: column;
+		height: auto;
+	}
+
+	.banner a {
+		width: 100%;
+	}
+
+	.logo {
+		width: 90%;
+	}
+
+	.brandName {
+		font-size: 1.5em;
+		text-align: center;
+	}
+
+	.menu {
+		padding: 5px;
+	}
+
+}
+
+@media screen and (min-width:320px) and (max-width:419px) {
+	.menuItem {
+		width: 90%;
+	}
+
+}

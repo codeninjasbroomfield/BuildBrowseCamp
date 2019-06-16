@@ -1,0 +1,88 @@
+<!Doctype html>
+<html>
+	<head>
+		<meta name="description" content="Code Ninja Restaurant project" />
+		<meta name="author" content="Deepa Rani Raveendran">
+		<meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+		<meta itemprop="name" content="Code Ninjas Restaurant Project">
+		<meta name="mobile-web-app-capable" content="yes">
+		<meta id="theme-color" name="theme-color" content="#307699">
+		<title>Code Ninja's Restaurant</title>
+		<link rel="stylesheet" href="css/main.css" />
+		<!--Font Awesome -->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+	</head>
+	<body>
+		<div class="banner">
+			<a href="./Welcome.html"><img class="logo" src="images/CNLogo.png" alt="CodeNinjaLogo"></a>
+			<h1 class="brandName">Code Ninja's Restaurant</h1>
+		</div>
+		<article class="main">
+			<div class="orderDetails" id="orderInfo">
+				<p> Thanks for your Order ! Enjoy your
+					<span class="orderItem">food</span>
+				</p>
+			</div>
+			<ul class="menu">
+				<li class="menuItem">
+					<div class="item">
+						<h2>Chicken pizza</h2>
+						<img src="images/pizza.jpg" alt="pizza"/>
+						<button onClick="placeOrder('Chicken Pizza')">Place Order</button>
+					</div>
+				</li>
+				<li class="menuItem">
+					<div class="item">
+						<h2>Mac and Cheese</h2>
+						<img src="images/macCheese.jpg" alt="mac and Cheese"/>
+						<button onClick="placeOrder('Mac and Cheese')">Place Order</button>
+					</div>
+				</li>
+				<li class="menuItem">
+					<div class="item">
+						<h2>Pepperoni pizza</h2>
+						<img src="images/pepperoniPizza.jpg" alt="pepperoni pizza"/>
+						<button onClick="placeOrder('Pepperoni Pizza')">Place Order</button>
+					</div>
+				</li>
+				<li class="menuItem">
+					<div class="item">
+						<h2>Hot Dog</h2>
+						<img src="images/hotDog.jpg" alt="HotDog"/>
+						<button onClick="placeOrder('Hot Dog')">Place Order</button>
+					</div>
+				</li>
+				<li class="menuItem">
+					<div class="item">
+						<h2>Chicken Burger</h2>
+						<img src="images/burger.jpg" alt="chicken burger"/>
+						<button onClick="placeOrder('Chicken Burger')">Place Order</button>
+					</div>
+				</li>
+				<li class="menuItem">
+					<div class="item">
+						<h2>Spring Salad</h2>
+						<img src="images/salad.jpg" alt="spring salad"/>
+						<button onClick="placeOrder('Spring Salad')">Place Order</button>
+					</div>
+				</li>
+			</ul>
+		</article>
+		<footer>
+			<p>Welcome to Code Ninja's Restaurant. Enjoy tasty food and have fun !</p>
+		</footer>
+		<script>
+			function placeOrder(food){
+				var node = document.getElementsByClassName('orderItem');
+				node[0].textContent =food;
+				var orderNode = document.getElementById('orderInfo');
+				orderNode.style.display = "block";
+				window.scrollTo(0, 0);
+				setTimeout(function(){
+					var n =document.getElementById('orderInfo');
+					n.style.display = "none";
+				},5000);
+			}
+		</script>
+	</body>
+</html>

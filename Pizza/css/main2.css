@@ -1,0 +1,47 @@
+.welcome {
+	width: 80%;
+	margin-right: auto;
+	margin-left: auto;
+	border: 1px solid gray;
+	height: auto;
+}
+
+h1 {
+	padding: 20px;
+	text-align: center;
+}
+
+.linkButton {
+	padding: 10px 13px;
+	background-color: green;
+	color: white;
+	text-decoration: none;
+	border-radius: 5px;
+	font-size: 1.2em;
+	margin-left: 5em;
+	margin-bottom: 1em;
+	display: inline-block;
+}
+
+p {
+	padding: 1em;
+	margin: 0;
+	line-height: 2em;
+}
+
+h2 {
+	margin: 0;
+	padding-left: 1em;
+	text-decoration: underline;
+}
+
+@media screen and (max-width:420px) {
+	.logo {
+		width: 90%;
+	}
+
+	.brandName {
+		display: none;
+	}
+
+}
