@@ -1,0 +1,161 @@
+<!doctype.html>
+<html lang="en">
+	<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02-01 Introduction Activity 1</title>
+    <style>
+        * {
+            box-sizing: border-box;
+
+        }
+
+        body {
+            font-family: 'verdana';
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 100%;
+            display: flex;
+            flex-flow: row wrap;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        header {
+            margin: 10px 18px 0 18px;
+            padding: 10px;
+            border: 3px solid lightgray;
+            width: 100%;
+            color: white;
+            background-color: darkslateblue;
+        }
+        
+        header h1, header p {
+            margin:3px;
+        }
+
+        article {
+            width: 100%;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            margin: 0 18px;
+            padding: 0;
+            border-left: 3px solid lightgray;
+            border-right: 3px solid lightgray;
+        }
+
+        .picture {
+            max-width: 100%;
+            margin: 5px 2px;
+            padding: 10px;
+            align-self:center;
+            border:3px solid white;
+
+        }
+
+        .content {
+            width: 50%;
+            margin: 10px 8px;
+            padding: 10px;
+        }
+
+        aside {
+            width: 45%;
+            background-color: darkgoldenrod;
+            color: white;
+            margin: 20px 0;
+            padding: 10px;
+            border-radius: 5px;
+            height: auto;
+
+            display: flex;
+            flex-flow: column;
+        }
+
+        .logo {
+            max-width: 100%;
+            border:20px solid lightgray;
+        }
+
+        footer {
+            width: 100%;
+            background-color: darkslateblue;
+            margin: 0 18px;
+            border: 3px solid lightgray;
+            color:white;
+        }
+        
+        footer p{
+            text-align: center;
+        }
+
+        @media screen and (min-width:320px) and (max-width:420px) {
+            article {
+                flex-flow: column nowrap;
+                justify-content: flex-start;
+            }
+
+           
+            .picture {
+                max-width: 100%;
+                align-self: flex-start;
+                margin: 5px;
+
+            }
+
+            nav ul li {
+                display: inline-flex;
+            }
+
+            .content {
+                width: 90%;
+            }
+
+            aside {
+                width: 80%;
+                align-self: center;
+                margin: 10px;
+            }
+
+            header,
+            footer {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>My Build and Browse Workshop</h1>
+            <p>Author: Code Ninja</p>
+        </header>
+        <article>
+            <div class="content">
+                <img class="logo" src="logo.png" alt="logo" />
+
+                <h1>My Experience @ Code Ninjas, Broomfield Co</h1>
+                <p>I had fun learning HTML, CSS and Javascript.I loved the brain breaks and had fun making new friends.</p>
+                <h2>With HTML/CSS/Javascript </h2>
+                <p>I learnt about how to create websites that could be accessed across all devices and make it look beautiful and interactive.</p>
+            </div>
+            <aside>
+                <div class="picture">
+                    <img src="kid.jpg" alt="codeNinja" />
+                </div>
+                <h2>Did You Know?</h2>
+                <p>CodeNinjas @ broomfield Co, also has camps about Robotics, Roblox, Game Development and many more. Its fun @ CodeNinjas</p>
+            </aside>
+        </article>
+
+        <footer>
+            <p>Many web pages put important information concerning contact information, support and privacy down here.</p>
+        </footer>
+    </div>
+
+</body></html>
